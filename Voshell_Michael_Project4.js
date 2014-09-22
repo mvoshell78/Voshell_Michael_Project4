@@ -7,7 +7,7 @@
 
 // Functions
 
-// This function verifies is a string of data is a phone number 
+// Does a string follow a 123-456-7890 pattern like a phone number?
 var verifyPhone = function () {
 var phonePrompt = prompt( " What is your phone number? Use 111-111-1111 format ")
 console.log (" You entered " + phonePrompt )
@@ -39,17 +39,39 @@ var wholeNumber = parseInt(areaCode + prefix + lastFour)
 };
 };
 
-
-
+// Is the string a URL? (Does it start with http: or https:?)
+    
+var webAddress = function() {
+    var myPrompt = prompt ("Enter a full web address, including https:")
+    console.log(myPrompt)
+    if (myPrompt.substr(0,5) === "http:") {
+        return true 
+    } else {
+        if (myPrompt.substr(0,6) === "https:") {
+           return true
+        } else {
+            return false
+            };//  1st conditional
+    };//2nd coditional
+   };// end of webAddress function
+    
 // Main Code
-
-var phone = verifyPhone() // conditional statements for return
+/*var phone = verifyPhone() // conditional statements for return
 if (phone === true) {
     console.log ("This Telephone number fits the format" )
     } else {
         if (phone === false) {
             console.log ("This is not a phone number or it does not for the format ")
             }   ;// false conditional
-    }; // close conditonal
+    }; // close conditonal*/
 
+    
+var web = webAddress()
+if (web === true) {
+    console.log("This is a url")
+    } else {
+        if (web === false ) {
+            console.log("This is not a url, You forgot to add http:")
+        }
+        };
 
