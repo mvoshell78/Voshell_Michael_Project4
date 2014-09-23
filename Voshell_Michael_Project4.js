@@ -5,18 +5,20 @@
 
 // Global Variables
 
+    // var for date function
 var dateCurrent = new Date(); 
 var dateFuture = new Date("2014/12/25")
+
+    // var for number to string function
 var myAge = "36"
+
+    // var for sum array function
 var myArray = [12, "Bob", 27, 15, "yellow" ]
 
 // Functions
 
-// Find the total value of just the numbers in an array, even if some of the items are not numbers.
+    // Find the total value of just the numbers in an array, even if some of the items are not numbers.
 var sumArray = function(myArray) {
- 
-    
-
     var i = 0
     var sum = 0
     while  (i < myArray.length) {
@@ -27,7 +29,7 @@ var sumArray = function(myArray) {
         };
     
     
-// Given a string version of a number such as "42", return the value as an actual Number, such as 42.
+    // Given a string version of a number such as "42", return the value as an actual Number, such as 42.
 
 var stringToNumber = function(myAge) {
     
@@ -37,7 +39,7 @@ var stringToNumber = function(myAge) {
     
 }; 
 
-// Does a string follow a 123-456-7890 pattern like a phone number?
+    // Does a string follow a 123-456-7890 pattern like a phone number?
 
 var verifyPhone = function () {
 
@@ -70,7 +72,7 @@ var wholeNumber = parseInt(areaCode + prefix + lastFour)
 };
 };
 
-// Is the string a URL? (Does it start with http: or https:?)
+    // Is the string a URL? (Does it start with http: or https:?)
     
 var webAddress = function() {
     
@@ -86,7 +88,7 @@ var webAddress = function() {
     };//2nd coditional
    };// end of webAddress function
  
-// Find the number of hours or days difference between two dates.
+    // Find the number of hours or days difference between two dates.
 
 var dateDiff = function(dateCurrent, dateFuture) {
     
@@ -99,18 +101,18 @@ var dateDiff = function(dateCurrent, dateFuture) {
 
 // Main Code
 
-// calling sum array function
+    // calling sum array function
 
 var sum = sumArray(myArray)
 console.log("The sum of the numbers in this array is " + sum)
 
-//calling string to number function
+    //calling string to number function
 
 var myAgeConverted = stringToNumber(myAge)
 console.log(" I am " + myAgeConverted + " years old")
 
 
-// calling the diffdate function
+    // calling the diffdate function
 
 var christmas = dateDiff(dateCurrent,dateFuture)
     var christmasDays = christmas[0]
@@ -118,7 +120,7 @@ var christmas = dateDiff(dateCurrent,dateFuture)
         console.log (christmasDays + " days left till Christmas")
         console.log ("Better get with it, thats only " + christmasHours + " more hours!")
 
-// calling verify phone 
+    // calling verify phone 
 
 var phonePrompt = prompt( " What is your phone number? Use 111-111-1111 format ")
 console.log (" You entered " + phonePrompt )
@@ -131,7 +133,7 @@ if (phone === true) {
             }   ;// false conditional
     }; // close conditonal*/
 
-// verify url
+    // verify url
 
 var webPrompt = prompt ("Enter a full web address, including https:")   
 var web = webAddress()
