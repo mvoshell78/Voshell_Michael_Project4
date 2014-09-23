@@ -6,11 +6,38 @@
 // Global Variables
 
 var dateCurrent = new Date(); 
-var dateFuture = new Date("2014/12/25")  
+var dateFuture = new Date("2014/12/25")
+var myAge = "36"
+var myArray = [1, "Bob", 27, 15, "yellow" ]
 
 // Functions
 
+// Find the total value of just the numbers in an array, even if some of the items are not numbers.
+var sumArray = function(myArray) {
+    
+    i = 0
+    while  (i < myArray.length) {
+        console.log(myArray[i])
+            if (myArray === isNaN(myArray[i])) {
+                console.log (myArray)
+            }
+            }
+        i++
+        };
+    
+    
+// Given a string version of a number such as "42", return the value as an actual Number, such as 42.
+
+var stringToNumber = function(myAge) {
+    
+    var convert = parseInt(myAge)
+    
+    return convert
+    
+}; 
+
 // Does a string follow a 123-456-7890 pattern like a phone number?
+
 var verifyPhone = function () {
 
 
@@ -70,6 +97,15 @@ var dateDiff = function(dateCurrent, dateFuture) {
     };
 
 // Main Code
+
+// calling sum array function
+
+sumArray(myArray)
+
+//calling string to number function
+
+var myAgeConverted = stringToNumber(myAge)
+console.log(" I am " + myAgeConverted + " years old")
 
 
 // calling the diffdate function
