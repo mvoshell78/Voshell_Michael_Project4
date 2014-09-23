@@ -8,21 +8,22 @@
 var dateCurrent = new Date(); 
 var dateFuture = new Date("2014/12/25")
 var myAge = "36"
-var myArray = [1, "Bob", 27, 15, "yellow" ]
+var myArray = [12, "Bob", 27, 15, "yellow" ]
 
 // Functions
 
 // Find the total value of just the numbers in an array, even if some of the items are not numbers.
 var sumArray = function(myArray) {
+ 
     
-    i = 0
+
+    var i = 0
+    var sum = 0
     while  (i < myArray.length) {
-        console.log(myArray[i])
-            if (myArray === isNaN(myArray[i])) {
-                console.log (myArray)
-            }
-            }
+        sum += parseFloat(myArray[i]) || 0;
         i++
+            }
+                return sum
         };
     
     
@@ -100,7 +101,8 @@ var dateDiff = function(dateCurrent, dateFuture) {
 
 // calling sum array function
 
-sumArray(myArray)
+var sum = sumArray(myArray)
+console.log("The sum of the numbers in this array is " + sum)
 
 //calling string to number function
 
