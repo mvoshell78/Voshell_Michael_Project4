@@ -4,6 +4,9 @@
 // Project 4
 
 // Global Variables
+    // var for title case
+    
+    var myString = "the red dog went to town"
 
     // var for date function
 var dateCurrent = new Date(); 
@@ -16,6 +19,39 @@ var myAge = "36"
 var myArray = [12, "Bob", 27, 15, "yellow" ]
 
 // Functions
+    // Title-case a string (split into words, then uppercase the first letter of each word)
+
+var titleCase = function(myString) {
+    
+    var mySub = myString.split(" ");
+    console.log(mySub)
+};
+
+
+   /* 
+    var foundAtPosition = 0;
+    var spaceP = 0;
+        while (foundAtPosition!= -1) {
+            
+            foundAtPosition = myString.indexOf (" ", foundAtPosition) ;
+            if (foundAtPosition!= -1) {
+                var stringArray = new Array();
+                stringArray[spaceP] = foundAtPosition;
+                spaceP++;
+                console.log(spaceP)
+                console.log(stringArray[spaceP]);
+                console.log(foundAtPosition)
+             
+                foundAtPosition++;
+             };
+           };
+        };
+    
+    */
+    
+    
+    
+
 
     // Find the total value of just the numbers in an array, even if some of the items are not numbers.
 var sumArray = function(myArray) {
@@ -101,6 +137,9 @@ var dateDiff = function(dateCurrent, dateFuture) {
 
 // Main Code
 
+    // calling titleCase
+    
+titleCase(myString)
     // calling sum array function
 
 var sum = sumArray(myArray)
