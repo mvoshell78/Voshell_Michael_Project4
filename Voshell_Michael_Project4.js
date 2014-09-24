@@ -24,31 +24,28 @@ var myArray = [12, "Bob", 27, 15, "yellow" ]
 var titleCase = function(myString) {
     
     var mySub = myString.split(" ");
-    console.log(mySub)
+        i = 0
+        while (i < mySub.length) {
+            var firstLetter = mySub[i].charAt(0).toUpperCase()  
+            var restOfTheWord = mySub[i].substr(1)
+            var capWord = firstLetter + restOfTheWord
+                 mySub[i] = capWord
+                    i++
+        };
+        ii = 0
+        while (ii < mySub.length) {
+            
+          var myNewString = myNewString +  " " + mySub[ii]  
+            ii++
+            
+            };
+     console.log(mySub.length)
+     
+     console.log (myNewString)
+     
 };
 
 
-   /* 
-    var foundAtPosition = 0;
-    var spaceP = 0;
-        while (foundAtPosition!= -1) {
-            
-            foundAtPosition = myString.indexOf (" ", foundAtPosition) ;
-            if (foundAtPosition!= -1) {
-                var stringArray = new Array();
-                stringArray[spaceP] = foundAtPosition;
-                spaceP++;
-                console.log(spaceP)
-                console.log(stringArray[spaceP]);
-                console.log(foundAtPosition)
-             
-                foundAtPosition++;
-             };
-           };
-        };
-    
-    */
-    
     
     
 
