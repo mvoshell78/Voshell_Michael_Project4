@@ -6,7 +6,8 @@
 // Global Variables
     // var for title case
     
-    var myString = "the red dog went to town"
+var myString = "the red dog went to town"
+
 
     // var for date function
 var dateCurrent = new Date(); 
@@ -18,13 +19,16 @@ var myAge = "36"
     // var for sum array function
 var myArray = [12, "Bob", 27, 15, "yellow" ]
 
+  
+
+
 // Functions
     // Title-case a string (split into words, then uppercase the first letter of each word)
 
 var titleCase = function(myString) {
-    
+    var myNewString ="";
     var mySub = myString.split(" ");
-        i = 0
+        var i = 0
         while (i < mySub.length) {
             var firstLetter = mySub[i].charAt(0).toUpperCase()  
             var restOfTheWord = mySub[i].substr(1)
@@ -32,25 +36,21 @@ var titleCase = function(myString) {
                  mySub[i] = capWord
                     i++
         };
-        ii = 0
+        
+       
+      var ii = 0
+      
         while (ii < mySub.length) {
-            
-          var myNewString = myNewString +  " " + mySub[ii]  
+            myNewString = myNewString + " " + mySub[ii]
             ii++
-            
             };
-     console.log(mySub.length)
-     
-     console.log (myNewString)
-     
+            
+            return myNewString
+    
 };
 
 
-    
-    
-
-
-    // Find the total value of just the numbers in an array, even if some of the items are not numbers.
+     // Find the total value of just the numbers in an array, even if some of the items are not numbers.
 var sumArray = function(myArray) {
     var i = 0
     var sum = 0
@@ -137,6 +137,8 @@ var dateDiff = function(dateCurrent, dateFuture) {
     // calling titleCase
     
 titleCase(myString)
+var caps = titleCase(myString)
+    console.log (caps)
     // calling sum array function
 
 var sum = sumArray(myArray)
